@@ -14,6 +14,7 @@ class PicSizeChecker:
         return f"{self.limit_axes}"
 
     def is_to_small(self, file_name: str, pic_axes: Axes) -> bool:
+        # test if the picture is smaller than the limit axes
         smaller = False
         if pic_axes < self.limit_axes:
             self.to_small_count += 1
