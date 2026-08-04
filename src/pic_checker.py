@@ -35,6 +35,7 @@ class PicSizeChecker:
 
         return smaller
 
+    # Änderung 2.1 in branch feature-branch-3
     def check(self, file_name: str, pic_axes: Axes) -> bool:
         return self.is_to_small(file_name, pic_axes)
 
