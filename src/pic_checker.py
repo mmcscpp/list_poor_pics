@@ -10,6 +10,7 @@ class PicSizeChecker:
         self.smallest_pic_resolution = self.checked_pic_axes.resolution()
         self.smallest_pic_axes = Axes(0, 0)
 
+    # Änderung 1
     def __str__(self) -> str:
         return f"{self.limit_axes}"
 
