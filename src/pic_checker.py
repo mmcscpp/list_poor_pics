@@ -59,6 +59,7 @@ class PicRatioChecker:
             self.bad_ratio_count += 1
         return bad_ratio
 
+    # Änderung 1.1 in branch feature-branch-1
     def check(self, file_name: str, pic_axes: Axes) -> bool:
         return self.has_bad_ratio(pic_axes)
 
