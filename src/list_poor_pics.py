@@ -12,7 +12,7 @@ from pic_checker import PicSizeChecker
 
 POOR_PICS_FOLDER = "poor_pics"
 
-
+# Änderung 2
 class Settings:
     def __init__(self) -> None:
         self.move_flag = False
