@@ -7,7 +7,7 @@ TOLERANCE = 0
 class Axes:
     def __init__(self, width: int, height: int) -> None:
         self.width = width
-        self.height = height
+        self.height = height + 1
 
     def resolution(self) -> int:
         return self.width * self.height
