@@ -78,6 +78,8 @@ class AxesTest(unittest.TestCase):
 
     def test_axes_lt_2b(self) -> None:
         test_axes = Axes(750, 1000)
+        # 2nd change for feature-3 branch
+        print(f"test_axes={test_axes}")
 
         self.assertEqual(test_axes < Axes(900, 675), False)
         self.assertEqual(test_axes < Axes(960, 720), False)
