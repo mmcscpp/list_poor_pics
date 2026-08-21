@@ -39,7 +39,8 @@ def get_pics(pic_path: str) -> Generator[tuple[str, Axes]]:
         for file_name in file_names:
             pic_complete_path = os.path.join(folder_name, file_name)         # fuegt automatisch den richtigen Separator hinzu
             if pic_complete_path.endswith(jpg_ext) and (POOR_PICS_FOLDER not in pic_complete_path):
-                # print(f"Datei: {pic_complete_path}")
+                # 1st change in feature-2 branch
+                print(f"File: {pic_complete_path}")
                 pic = Image.open(pic_complete_path)
                 pic_axes = Axes(pic.width, pic.height)
                 pic.close()
