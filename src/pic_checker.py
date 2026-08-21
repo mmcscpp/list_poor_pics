@@ -10,7 +10,6 @@ class PicSizeChecker:
         self.smallest_pic_resolution = self.checked_pic_axes.resolution()
         self.smallest_pic_axes = Axes(0, 0)
 
-    # Änderung 1
     def __str__(self) -> str:
         return f"{self.limit_axes}"
 
@@ -35,7 +34,6 @@ class PicSizeChecker:
 
         return smaller
 
-    # Änderung 2.1 in branch feature-branch-3
     def check(self, file_name: str, pic_axes: Axes) -> bool:
         return self.is_to_small(file_name, pic_axes)
 
@@ -57,6 +55,8 @@ class PicRatioChecker:
         bad_ratio = pic_axes.ratio() >= BAD_RATIO_THRESHOLD
         if bad_ratio:
             self.bad_ratio_count += 1
+            # 3rd change in feature-3 branch
+            print(f"bad ratio: {pic_axes} -> ratio={pic_axes.ratio()}")
         return bad_ratio
 
     # Änderung 1.1 in branch feature-branch-1
