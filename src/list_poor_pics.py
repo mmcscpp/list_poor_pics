@@ -39,7 +39,8 @@ def get_pics(pic_path: str) -> Generator[tuple[str, Axes]]:
         for file_name in file_names:
             pic_complete_path = os.path.join(folder_name, file_name)         # fuegt automatisch den richtigen Separator hinzu
             if pic_complete_path.endswith(jpg_ext) and (POOR_PICS_FOLDER not in pic_complete_path):
-                # print(f"Datei: {pic_complete_path}")
+                # 1st change in feature-2 branch
+                print(f"File: {pic_complete_path}")
                 pic = Image.open(pic_complete_path)
                 pic_axes = Axes(pic.width, pic.height)
                 pic.close()
@@ -49,7 +50,8 @@ def get_pics(pic_path: str) -> Generator[tuple[str, Axes]]:
 
 def move_poor_pic(pic_path: str, to_folder: str) -> bool:
     pic_file_name = os.path.basename(pic_path)
-    # '_' is the placeholder for folder name
+    # 2nd change in feature-2 branch
+    print(f"pic-file-name: {pic_file_name}")
 
     poor_pic_path = os.path.join(to_folder, pic_file_name)
     if not os.path.exists(poor_pic_path):
