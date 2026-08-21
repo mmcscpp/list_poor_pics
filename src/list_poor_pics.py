@@ -12,7 +12,7 @@ from pic_checker import PicSizeChecker
 
 POOR_PICS_FOLDER = "poor_pics"
 
-# Änderung 2
+
 class Settings:
     def __init__(self) -> None:
         self.move_flag = False
@@ -29,7 +29,8 @@ def get_pics(pic_path: str) -> Generator[tuple[str, Axes]]:
 
     for folder_name, _, file_names in os.walk(pic_path):
         # '_' is the placeholder for sub_folder_name
-        # print(f"Verzeichnis: {folder_name}")
+        # feature-1 change
+        print(f"Folder: {folder_name}")
 
         # for sub_folder_name in sub_folder_names:
         #    print(f"Unterverzeichnis: {sub_folder_name}")
