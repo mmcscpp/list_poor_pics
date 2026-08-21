@@ -18,6 +18,8 @@ class PicSizeChecker:
         smaller = False
         if pic_axes < self.limit_axes:
             self.to_small_count += 1
+            # 1st change in feature-4 branch
+            print(f"small-count={self.to_small_count}")
             smaller = True
 
         if pic_axes.width < self.checked_pic_axes.width:
