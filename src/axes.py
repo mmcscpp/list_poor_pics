@@ -52,6 +52,8 @@ class AxesTest(unittest.TestCase):
 
     def set_up(self) -> None:
         self.limit_axes = Axes(1200, 900)
+        # 1st change for feature-3 branch
+        print(f"limit_axes={self.limit_axes}")
 
     def test_axes_lt_1(self) -> None:
         test_axes = [(Axes(500, 300), True), (Axes(300, 500), True), \
