@@ -50,7 +50,8 @@ def get_pics(pic_path: str) -> Generator[tuple[str, Axes]]:
 
 def move_poor_pic(pic_path: str, to_folder: str) -> bool:
     pic_file_name = os.path.basename(pic_path)
-    # '_' is the placeholder for folder name
+    # 2nd change in feature-2 branch
+    print(f"pic-file-name: {pic_file_name}")
 
     poor_pic_path = os.path.join(to_folder, pic_file_name)
     if not os.path.exists(poor_pic_path):
